@@ -142,8 +142,7 @@ export class RagService {
   }
 
   private storeChunk(filePath: string, content: string, embedding: number[]) {
-    // We'll implement this using chatService or a direct DB call
-    // Storing as JSON string in SQLite for simplicity in this local setup
+    // Storing as JSON string in SQLite for simplicity 
     chatService.saveFileChunk(filePath, content, JSON.stringify(embedding));
   }
 
