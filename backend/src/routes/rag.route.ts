@@ -4,10 +4,7 @@ import { ragService } from '../services/rag.service';
 export default async function ragRoutes(fastify: FastifyInstance) {
   // Trigger project indexing
   fastify.post('/rag/index', async (request, reply) => {
-    // We run indexing in the background as it can take time
     ragService.indexProject((current, total, file) => {
-      // We could use WebSockets for real-time progress, 
-      // but for now we'll just log it.
       console.log(`[RAG Indexing] ${current}/${total}: ${file}`);
     }).catch(err => {
       console.error('[RAG Indexing Error]', err);
