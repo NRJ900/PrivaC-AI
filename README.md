@@ -1,4 +1,4 @@
-
+# PrivaC AI
 > **Local-First, Privacy-Focused AI Chat, RAG & Web Intelligence Platform**
 
 PrivaC AI is a high-performance, private-by-design AI workspace that runs entirely on your local machine. It connects a modern **React + Vite** frontend with a **Fastify TypeScript** backend proxy, utilizing local LLMs served via **Ollama**.
